@@ -2,6 +2,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
 import Layout from '../components/MyLayout.js'
+import Login from '../components/Login.js'
 
 export default () => (
   <div>
@@ -18,7 +19,7 @@ export default () => (
       }
     `}</style>
     <Layout>
-      <p>Hello world!</p>
+      <Login />
     </Layout>
   </div>
 )
