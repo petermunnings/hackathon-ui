@@ -1,24 +1,15 @@
+import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const TestComponent = dynamic(() => import('../components/test'))
+
 export default () => (
   <div>
-    Hello world
-    <p>scoped!</p>
-    <style jsx>{`
-      p {
-        color: blue;
-      }
-      div {
-        background: red;
-      }
-      @media (max-width: 600px) {
-        div {
-          background: blue;
-        }
-      }
-    `}</style>
-    <style global jsx>{`
-      body {
-        background: black;
-      }
-    `}</style>
+    <Head>
+      <title>Hackion : Adhara international payments</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
+    <p>Hello world!</p>
+    <TestComponent />
   </div>
 )
